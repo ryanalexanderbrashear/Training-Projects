@@ -49,3 +49,11 @@ for index in stride(from: characterArray.count, to: 0, by: -1) {
 //Finally, print out the reversed name
 print(reversedName)
 
+/*********************** 3 ***********************/
+
+//Get the number of characters in the name the user has entered, and store it in a constant
+let numberOfCharactersInName = name.characters.count
+
+//Print the number of characters 
+print(numberOfCharactersInName)
+
