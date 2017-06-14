@@ -26,7 +26,7 @@ func getUserInput() -> String {
 print("Please enter your name: ")
 
 //Call the function to get the user input from the keyboard and assign it to a constant
-let name = getUserInput()
+let name = getUserInput().uppercased()
 
 /*********************** 2 ***********************/
 
@@ -41,7 +41,7 @@ for character in name.characters {
 //Create an empty string which we will use to hold our reversed name string
 var reversedName = ""
 
-//Go through our character array in reverse, and add each character to our reversed name string
+//Go through our character array in reverse (by using stride), and add each character to our reversed name string
 for index in stride(from: characterArray.count, to: 0, by: -1) {
     reversedName.append(characterArray[index-1])
 }
@@ -54,6 +54,15 @@ print(reversedName)
 //Get the number of characters in the name the user has entered, and store it in a constant
 let numberOfCharactersInName = name.characters.count
 
-//Print the number of characters 
+//Print the number of characters
 print(numberOfCharactersInName)
 
+/*********************** 4 ***********************/
+
+//Sort the array of characters by using a built in Swift function. Since our array contains characters, it will sort them in ascending (alphabetical) order. Assign the sorted array to a constant
+let sortedCharacterArray = characterArray.sorted()
+
+//Print out each character in our new sorted array, showing that they have been sorted properly
+for character in sortedCharacterArray {
+    print(character)
+}
