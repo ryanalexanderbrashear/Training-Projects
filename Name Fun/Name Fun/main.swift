@@ -8,5 +8,18 @@
 
 import Foundation
 
-print("Hello, World!")
+//Function to get user input from the keyboard
+func getUserInput() -> String {
+    let keyboard = FileHandle.standardInput
+    let inputData = keyboard.availableData
+    let str = NSString(data: inputData, encoding: String.Encoding.utf8.rawValue)
+    if let string = str {
+        return string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+    } else {
+        return "Invalid input!"
+    }
+}
+
+print("Please enter your name: ")
+let name = getUserInput()
 
