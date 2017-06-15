@@ -14,6 +14,9 @@ var finished: Bool = false
 //Create an instance of the InputManager class so we can get user input
 let inputManager = InputManager()
 
+//Array to store the concerts the user has entered
+var concerts: [Concert] = []
+
 print("Please enter the titles of the concerts you've attended (or done to quit): ")
 while !finished {
     //Get user input from the keyboard
@@ -22,6 +25,8 @@ while !finished {
     if input != "done" {
         //Create a new concert with the user input
         let concert = Concert(title: input)
+        //Append the new concert to our array of concerts
+        concerts.append(concert)
     //If the input is equal to "done"
     } else {
         //Change finished to true, which will cause us to break out of the while loop
