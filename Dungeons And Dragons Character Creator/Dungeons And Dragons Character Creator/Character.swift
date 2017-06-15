@@ -26,4 +26,15 @@ class Character {
         self.wisdom = wisdom
         self.charisma = charisma
     }
+    
+    //Prints out the stats for the character
+    func printStats() {
+        print("This character's stats: ")
+        print("Strength: \(strength)")
+        print("Constitution: \(constitution)")
+        print("Dexterity: \(dexterity)")
+        print("Intelligence: \(intelligence)")
+        print("Wisdom: \(wisdom)")
+        print("Charisma: \(charisma)")
+    }
 }

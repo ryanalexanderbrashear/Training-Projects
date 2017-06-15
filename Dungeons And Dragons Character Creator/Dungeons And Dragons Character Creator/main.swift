@@ -16,6 +16,9 @@ var intelligenceValue: Int = 0
 var wisdomValue: Int = 0
 var charismaValue: Int = 0
 
+//Array to hold the stat values to demonstrate adding elements to an array
+var stats: [Int] = []
+
 //Initialize a Dice object with six sides
 let sixSidedDie = Dice(sides: 6)
 
@@ -51,5 +54,21 @@ print("Final constitution value: \(constitutionValue)")
 print("Final intelligence value: \(intelligenceValue)")
 print("Final wisdom value: \(wisdomValue)")
 print("Final charisma value: \(charismaValue)")
+
+//Now that we have all of our stat values generated, we can create our character using them:
+let Gandalf = Character(strength: strengthValue, constitution: constitutionValue, dexterity: dexterityValue, intelligence: intelligenceValue, wisdom: wisdomValue, charisma: charismaValue)
+
+Gandalf.printStats()
+
+//We can also add the stat values to an array, since they're all of the same type:
+stats.append(strengthValue)
+stats.append(dexterityValue)
+stats.append(constitutionValue)
+stats.append(intelligenceValue)
+stats.append(wisdomValue)
+stats.append(charismaValue)
+
+print(stats)
+print(stats.count)
 
 
