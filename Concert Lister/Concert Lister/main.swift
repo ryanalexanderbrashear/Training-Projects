@@ -34,3 +34,8 @@ while !finished {
     }
 }
 
+//For each concert in our array of concerts, print out the title of the concert
+for concert in concerts {
+    print(concert.title)
+}
+
