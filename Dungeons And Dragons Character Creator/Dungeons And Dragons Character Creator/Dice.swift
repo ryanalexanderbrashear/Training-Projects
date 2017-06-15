@@ -21,6 +21,8 @@ class Dice {
     
     //Function to roll the die and return a random integer value in the range from 1 to the number of sides the die has
     func roll() -> Int {
-        return 0
+        //arc4random_uniform takes an upper bound value, which we set as our number of sides (converted to a UInt32, a type of integer). Because the random number generated will be in the range 0 to 1 less than the number of sides passed in, so we add 1 to give us the proper range of values as a result (in the case of a six sided die, the range of results should be 1-6). We convert the result to an integer and return it
+        let result = arc4random_uniform(UInt32(sides)) + 1
+        return Int(result)
     }
 }
