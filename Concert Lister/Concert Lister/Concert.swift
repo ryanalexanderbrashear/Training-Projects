@@ -8,9 +8,12 @@
 
 import Foundation
 
+//This class stores information about concerts
 class Concert {
+    //This parameter corresponds to the title of the Concert
     var title: String
     
+    //This is an initializer for the Concert class that takes a title as input, and sets the title parameter with the input value
     init(title: String) {
         self.title = title
     }
