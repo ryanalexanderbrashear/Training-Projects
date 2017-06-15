@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		398435A41EF07AC300B46E0D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398435A31EF07AC300B46E0D /* main.swift */; };
+		398435D11EF2BA8200B46E0D /* InputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398435D01EF2BA8200B46E0D /* InputManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		398435A01EF07AC300B46E0D /* Name Fun */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Name Fun"; sourceTree = BUILT_PRODUCTS_DIR; };
 		398435A31EF07AC300B46E0D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		398435D01EF2BA8200B46E0D /* InputManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				398435A31EF07AC300B46E0D /* main.swift */,
+				398435D01EF2BA8200B46E0D /* InputManager.swift */,
 			);
 			path = "Name Fun";
 			sourceTree = "<group>";
@@ -121,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				398435D11EF2BA8200B46E0D /* InputManager.swift in Sources */,
 				398435A41EF07AC300B46E0D /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +259,7 @@
 				398435A91EF07AC300B46E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

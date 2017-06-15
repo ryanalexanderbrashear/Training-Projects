@@ -10,23 +10,14 @@ import Foundation
 
 /*********************** 1 ***********************/
 
-//Function to get user input from the keyboard
-func getUserInput() -> String {
-    let keyboard = FileHandle.standardInput
-    let inputData = keyboard.availableData
-    let str = NSString(data: inputData, encoding: String.Encoding.utf8.rawValue)
-    if let string = str {
-        return string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-    } else {
-        return "Invalid input!"
-    }
-}
+//Create an instance of our InputManager class, used to retrieve user input from the keyboard
+let inputManager = InputManager()
 
 //Prompt to request the user enters their name
 print("Please enter your name: ")
 
-//Call the function to get the user input from the keyboard and assign it to a constant
-let name = getUserInput().uppercased()
+//Call the function from our InputManager class to get the user input from the keyboard and assign it to a constant (also, uppercase all the letters so that later when we sort the name characters we will get the proper behavior)
+let name = inputManager.getUserInput().uppercased()
 
 /*********************** 2 ***********************/
 
