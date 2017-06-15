@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		398435CA1EF1C55F00B46E0D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398435C91EF1C55F00B46E0D /* main.swift */; };
+		398435D31EF2C0E900B46E0D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398435D21EF2C0E900B46E0D /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		398435C61EF1C55F00B46E0D /* Dungeons And Dragons Character Creator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Dungeons And Dragons Character Creator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		398435C91EF1C55F00B46E0D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		398435D21EF2C0E900B46E0D /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				398435C91EF1C55F00B46E0D /* main.swift */,
+				398435D21EF2C0E900B46E0D /* Character.swift */,
 			);
 			path = "Dungeons And Dragons Character Creator";
 			sourceTree = "<group>";
@@ -122,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				398435CA1EF1C55F00B46E0D /* main.swift in Sources */,
+				398435D31EF2C0E900B46E0D /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +259,7 @@
 				398435CF1EF1C55F00B46E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
