@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		398435E31EF2FCA000B46E0D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398435E21EF2FCA000B46E0D /* main.swift */; };
 		398435EA1EF2FFFF00B46E0D /* InputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398435E91EF2FFFF00B46E0D /* InputManager.swift */; };
+		398435EC1EF3008100B46E0D /* Concert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398435EB1EF3008100B46E0D /* Concert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		398435DF1EF2FCA000B46E0D /* Concert Lister */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Concert Lister"; sourceTree = BUILT_PRODUCTS_DIR; };
 		398435E21EF2FCA000B46E0D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		398435E91EF2FFFF00B46E0D /* InputManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputManager.swift; sourceTree = "<group>"; };
+		398435EB1EF3008100B46E0D /* Concert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				398435E91EF2FFFF00B46E0D /* InputManager.swift */,
 				398435E21EF2FCA000B46E0D /* main.swift */,
+				398435EB1EF3008100B46E0D /* Concert.swift */,
 			);
 			path = "Concert Lister";
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				398435EA1EF2FFFF00B46E0D /* InputManager.swift in Sources */,
+				398435EC1EF3008100B46E0D /* Concert.swift in Sources */,
 				398435E31EF2FCA000B46E0D /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
