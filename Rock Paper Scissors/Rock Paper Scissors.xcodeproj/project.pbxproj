@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		398436111EF442A200B46E0D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398436101EF442A200B46E0D /* main.swift */; };
+		398436181EF4454A00B46E0D /* InputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398436171EF4454A00B46E0D /* InputManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		3984360D1EF442A200B46E0D /* Rock Paper Scissors */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Rock Paper Scissors"; sourceTree = BUILT_PRODUCTS_DIR; };
 		398436101EF442A200B46E0D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		398436171EF4454A00B46E0D /* InputManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		3984360F1EF442A200B46E0D /* Rock Paper Scissors */ = {
 			isa = PBXGroup;
 			children = (
+				398436171EF4454A00B46E0D /* InputManager.swift */,
 				398436101EF442A200B46E0D /* main.swift */,
 			);
 			path = "Rock Paper Scissors";
@@ -121,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				398436181EF4454A00B46E0D /* InputManager.swift in Sources */,
 				398436111EF442A200B46E0D /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +259,7 @@
 				398436161EF442A200B46E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
