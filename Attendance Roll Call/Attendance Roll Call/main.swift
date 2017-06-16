@@ -8,5 +8,12 @@
 
 import Foundation
 
-print("Hello, World!")
+func showMainMenu() {
+    print("MAIN MENU")
+    print("1. Add a name")
+    print("2. See all names")
+    print("3. Look up a name")
+    print("4. Remove a name")
+}
 
+showMainMenu()
