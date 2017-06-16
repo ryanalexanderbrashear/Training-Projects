@@ -30,9 +30,9 @@ func showMainMenu() {
 //Function to add a person to the people array by getting the first and last name as user input, appending them to the array, and then sorting the array using the sortNames function
 func addName() {
     print("Please enter the person's first name: ")
-    let inputFirstName = inputManager.getUserInput()
+    let inputFirstName = inputManager.getUserInput().uppercased()
     print("Please enter the person's last name: ")
-    let inputLastName = inputManager.getUserInput()
+    let inputLastName = inputManager.getUserInput().uppercased()
     let newPerson = Person(firstName: inputFirstName, lastName: inputLastName)
     people.append(newPerson)
     sortNames()
@@ -60,10 +60,11 @@ func showAllNames() {
     }
 }
 
+//Function to look up a person's name. The user enters a name, and if that matches any first or last names in the people array, it is added to the results array. Once all the people have been checked, the first and last name of every person in the results array is printed
 func lookupName() {
     var results: [Person] = []
     print("Please enter a first or last name you wish to look up: ")
-    let lookupName = inputManager.getUserInput()
+    let lookupName = inputManager.getUserInput().uppercased()
     for person in people {
         if person.firstName == lookupName || person.lastName == lookupName {
             results.append(person)
@@ -72,6 +73,23 @@ func lookupName() {
     
     for result in results {
         print("\(result.firstName) \(result.lastName)")
+    }
+}
+
+//Function to remove a name by taking a first and last name as user input, using a for loop to iterate through the people array, and checking to see if any of the people have first and last names that match the input. If a match is found, the person at that index is removed from the people array
+func removeName() {
+    print("Please enter the first name of the person you wish to remove: ")
+    let firstName = inputManager.getUserInput().uppercased()
+    print("Please enter the last name of the person you wish to remove: ")
+    let lastName = inputManager.getUserInput().uppercased()
+    
+    //Since we need the index of the person to be able to remove them from the array of people, we use a for loop here instead of a foreach loop
+    for index in 0..<people.count {
+        if people[index].firstName == firstName && people[index].lastName == lastName {
+            people.remove(at: index)
+            //Break here so that in the case we have multiple people with the exact same name, we only remove one of them
+            break
+        }
     }
 }
 
@@ -86,7 +104,7 @@ func selectMenuOption() {
         case 3:
             lookupName()
         case 4:
-            print("Remove a name selected")
+            removeName()
         case 5:
             finished = true
         default:
