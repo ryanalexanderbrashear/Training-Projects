@@ -17,7 +17,7 @@ let inputManager = InputManager()
 //Array to store the concerts the user has entered
 var concerts: [Concert] = []
 
-//Getting the concert titles as user input
+/**** Getting the concert titles as user input ****/
 
 print("Please enter the titles of the concerts you've attended (or done to quit): ")
 while !finished {
@@ -36,12 +36,14 @@ while !finished {
     }
 }
 
+/**** Printing the concerts ****/
+
 //For each concert in our array of concerts, print out the title of the concert
 for concert in concerts {
     print(concert.title)
 }
 
-//Rating the concerts
+/**** Rating the concerts ***/
 
 print("Please enter a value between 1 and 5 to rate each concert: ")
 
@@ -60,6 +62,19 @@ for concert in concerts {
     //If the user input we retrieve cannot be converted to an integer, display an error
     } else {
         print("Invalid rating entered!")
+    }
+}
+
+/**** Sorting the concerts by rating and printing them ****/
+
+//Create a for loop that iterates from 1 to 5
+for index in 1...5 {
+    //Use a foreach loop to iterate through our concerts
+    for concert in concerts {
+        //If the concert's rating is equivalent to the current for loop index, print the concert's title and rating
+        if concert.rating == index {
+            print("Concert title: \(concert.title) || Rating: \(concert.rating!)")
+        }
     }
 }
 
