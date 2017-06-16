@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Class to represent a person in the application, with first and last name properties
 class Person {
     var firstName: String
     var lastName: String
