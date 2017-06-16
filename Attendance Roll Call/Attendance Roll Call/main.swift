@@ -40,13 +40,23 @@ func addName() {
 
 //Function to sort the people stored in the array by last name using bubble sort
 func sortNames() {
+    //Used to store an instance of a Person temporarily, so we can switch values arround when they need to be swapped without losing data
     var temp: Person
+    //For loop starting at 1 and ending at 1 less than the number of items in our array
     for i in 1..<people.count {
+        //If the person at index i-1 has a last name that should appear later than the person at index i's, swap them, using the temp variable to store the the value of the person at index i
         if (people[i - 1].lastName) > (people[i].lastName) {
             temp = people[i]
             people[i] = people[i-1]
             people[i-1] = temp
         }
+    }
+}
+
+//Function to print all the names that have been entered by iterating through the people array using a foreach loop
+func showAllNames() {
+    for person in people {
+        print("\(person.firstName) \(person.lastName)")
     }
 }
 
@@ -57,7 +67,7 @@ func selectMenuOption() {
         case 1:
             addName()
         case 2:
-            print("See all names selected")
+            showAllNames()
         case 3:
             print("Look up a name selected")
         case 4:
