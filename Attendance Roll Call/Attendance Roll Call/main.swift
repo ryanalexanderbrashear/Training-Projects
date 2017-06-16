@@ -60,6 +60,21 @@ func showAllNames() {
     }
 }
 
+func lookupName() {
+    var results: [Person] = []
+    print("Please enter a first or last name you wish to look up: ")
+    let lookupName = inputManager.getUserInput()
+    for person in people {
+        if person.firstName == lookupName || person.lastName == lookupName {
+            results.append(person)
+        }
+    }
+    
+    for result in results {
+        print("\(result.firstName) \(result.lastName)")
+    }
+}
+
 //Function to select menu options by taking user input and using a switch statement to execute the proper functions
 func selectMenuOption() {
     if let userSelection = Int(inputManager.getUserInput()) {
@@ -69,7 +84,7 @@ func selectMenuOption() {
         case 2:
             showAllNames()
         case 3:
-            print("Look up a name selected")
+            lookupName()
         case 4:
             print("Remove a name selected")
         case 5:
