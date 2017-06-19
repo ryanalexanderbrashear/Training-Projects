@@ -27,11 +27,18 @@ var userSelection: RPSSelections?
 //Variable which stores which selection the computer has made, through the use of the RPSSelections enumeration
 var computerSelection: RPSSelections?
 
+//Variables which store information about the number of games played, wins, losses, and draws in order to calculate statistics
+var numberOfGames = 0
+var numberOfWins = 0
+var numberOfLosses = 0
+var numberOfDraws = 0
+
 //Function to show the main menu options of the game
 func showMenu() {
     print("Welcome to RPS!")
     print("1. Play a game")
-    print("2. Quit")
+    print("2. Show statistics")
+    print("3. Quit")
 }
 
 //Function for getting input from the user to determine which main menu option they wish to select, and carrying out the appropriate behavior
@@ -44,6 +51,8 @@ func getMenuSelection() {
             printSelections()
             decideWinner()
         case 2:
+            showUserStatistics()
+        case 3:
             finished = true
         default:
             print("There is no corresponding menu action for that number. Please try again.")
@@ -106,6 +115,8 @@ func decideWinner() {
         return
     }
     
+    numberOfGames += 1
+    
     //Cleaner solution, using a switch statement using a tuple containing the user selection and computer selection
 //    switch (userSelected, computerSelected) {
 //    //Draw cases
@@ -136,30 +147,48 @@ func decideWinner() {
     //Less clean solution using if statements. However, this uses the logical AND and NOT operators
     if userSelected == computerSelected {
         print("Draw")
+        numberOfDraws += 1
     }
     
     if userSelected == .rock && computerSelected != .scissors {
         print("Computer wins")
+        numberOfLosses += 1
     }
     
     if userSelected == .rock && computerSelected == .scissors {
         print("User wins")
+        numberOfWins += 1
     }
     
     if userSelected == .paper && computerSelected != .rock {
         print("Computer wins")
+        numberOfLosses += 1
     }
     
     if userSelected == .paper && computerSelected == .rock {
         print("User wins")
+        numberOfWins += 1
     }
     
     if userSelected == .scissors && computerSelected != .paper {
         print("Computer wins")
+        numberOfLosses += 1
     }
     
     if userSelected == .scissors && computerSelected == .paper {
         print("User wins")
+        numberOfWins += 1
+    }
+}
+
+func showUserStatistics() {
+    print("Number of wins: \(numberOfWins)")
+    print("Number of losses: \(numberOfLosses)")
+    print("Number of draws: \(numberOfDraws)")
+    print("Number of games played: \(numberOfGames)")
+    if numberOfGames > 0 {
+        let winPercentage: Double = Double(numberOfWins) / Double(numberOfGames)
+        print("Win percentage: \(winPercentage * 100)%")
     }
 }
 
