@@ -41,6 +41,7 @@ func getMenuSelection() {
         case 1:
             getUserSelection()
             getComputerSelection()
+            printSelections()
         case 2:
             finished = true
         default:
@@ -81,6 +82,17 @@ func getComputerSelection() {
     default:
         print("There was an error making the computer's selection. Please try again.")
         return
+    }
+}
+
+//Function to print the selections made by the user and the computer
+func printSelections() {
+    if let userSelected = userSelection?.rawValue {
+        print("User picked: \(userSelected)")
+    }
+    
+    if let computerSelected = computerSelection?.rawValue {
+        print("Computer picked: \(computerSelected)")
     }
 }
 
