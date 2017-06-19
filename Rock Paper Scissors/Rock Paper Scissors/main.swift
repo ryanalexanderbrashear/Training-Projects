@@ -24,6 +24,9 @@ var finished = false
 //Variable which stores which selection the user has made, through the use of the RPSSelections enumeration
 var userSelection: RPSSelections?
 
+//Variable which stores which selection the computer has made, through the use of the RPSSelections enumeration
+var computerSelection: RPSSelections?
+
 //Function to show the main menu options of the game
 func showMenu() {
     print("Welcome to RPS!")
@@ -37,6 +40,7 @@ func getMenuSelection() {
         switch selectedMenuOption {
         case 1:
             getUserSelection()
+            getComputerSelection()
         case 2:
             finished = true
         default:
@@ -60,7 +64,23 @@ func getUserSelection() {
         userSelection = .scissors
     default:
         print("Invalid selection made. Please try again.")
-        showMenu()
+        return
+    }
+}
+
+//Function that gets the computer's selection by generating a random number in the range 0-2 and setting the computerSelection variable properly based on that
+func getComputerSelection() {
+    let randomNumber = arc4random_uniform(3)
+    switch randomNumber {
+    case 0:
+        computerSelection = .rock
+    case 1:
+        computerSelection = .paper
+    case 2:
+        computerSelection = .scissors
+    default:
+        print("There was an error making the computer's selection. Please try again.")
+        return
     }
 }
 
