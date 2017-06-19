@@ -42,6 +42,7 @@ func getMenuSelection() {
             getUserSelection()
             getComputerSelection()
             printSelections()
+            decideWinner()
         case 2:
             finished = true
         default:
@@ -93,6 +94,72 @@ func printSelections() {
     
     if let computerSelected = computerSelection?.rawValue {
         print("Computer picked: \(computerSelected)")
+    }
+}
+
+func decideWinner() {
+    guard let userSelected = userSelection else {
+        return
+    }
+    
+    guard let computerSelected = computerSelection else {
+        return
+    }
+    
+    //Cleaner solution, using a switch statement using a tuple containing the user selection and computer selection
+//    switch (userSelected, computerSelected) {
+//    //Draw cases
+//    case (.rock, .rock):
+//        print("Draw")
+//    case (.paper, .paper):
+//        print("Draw")
+//    case (.scissors, .scissors):
+//        print("Draw")
+//        
+//    //Computer win cases
+//    case (.rock, .paper):
+//        print("Computer wins")
+//    case (.paper, .scissors):
+//        print("Computer wins")
+//    case (.scissors, .rock):
+//        print("Computer wins")
+//    
+//    //User win cases
+//    case (.rock, .scissors):
+//        print("User wins")
+//    case (.paper, .rock):
+//        print("User wins")
+//    case (.scissors, .paper):
+//        print("User wins")
+//    }
+    
+    //Less clean solution using if statements. However, this uses the logical AND and NOT operators
+    if userSelected == computerSelected {
+        print("Draw")
+    }
+    
+    if userSelected == .rock && computerSelected != .scissors {
+        print("Computer wins")
+    }
+    
+    if userSelected == .rock && computerSelected == .scissors {
+        print("User wins")
+    }
+    
+    if userSelected == .paper && computerSelected != .rock {
+        print("Computer wins")
+    }
+    
+    if userSelected == .paper && computerSelected == .rock {
+        print("User wins")
+    }
+    
+    if userSelected == .scissors && computerSelected != .paper {
+        print("Computer wins")
+    }
+    
+    if userSelected == .scissors && computerSelected == .paper {
+        print("User wins")
     }
 }
 
