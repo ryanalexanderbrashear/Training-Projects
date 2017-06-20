@@ -33,6 +33,11 @@ var numberOfWins = 0
 var numberOfLosses = 0
 var numberOfDraws = 0
 
+//Variables that store how many times the user has picked each option, which are used to in the getComputerSelection function to determine what the computer will pick
+var timesRockPicked = 0
+var timesPaperPicked = 0
+var timesScissorsPicked = 0
+
 //Function to show the main menu options of the game
 func showMenu() {
     print("Welcome to RPS!")
@@ -69,10 +74,13 @@ func getUserSelection() {
     switch userInput {
     case "ROCK":
         userSelection = .rock
+        timesRockPicked += 1
     case "PAPER":
         userSelection = .paper
+        timesPaperPicked += 1
     case "SCISSORS":
         userSelection = .scissors
+        timesScissorsPicked += 1
     default:
         print("Invalid selection made. Please try again.")
         return
@@ -80,18 +88,31 @@ func getUserSelection() {
 }
 
 //Function that gets the computer's selection by generating a random number in the range 0-2 and setting the computerSelection variable properly based on that
+//func getComputerSelection() {
+//    let randomNumber = arc4random_uniform(3)
+//    switch randomNumber {
+//    case 0:
+//        computerSelection = .rock
+//    case 1:
+//        computerSelection = .paper
+//    case 2:
+//        computerSelection = .scissors
+//    default:
+//        print("There was an error making the computer's selection. Please try again.")
+//        return
+//    }
+//}
+
+//Function that gets the computer's selection by using the number of times the user has picked each option to determine which option to pick. The computer will pick the option that will beat the selection the user has made the most, or just default to rock if two of the pick numbers are the same
 func getComputerSelection() {
-    let randomNumber = arc4random_uniform(3)
-    switch randomNumber {
-    case 0:
-        computerSelection = .rock
-    case 1:
+    if timesRockPicked > timesPaperPicked && timesRockPicked > timesScissorsPicked {
         computerSelection = .paper
-    case 2:
+    } else if timesPaperPicked > timesRockPicked && timesPaperPicked > timesScissorsPicked {
         computerSelection = .scissors
-    default:
-        print("There was an error making the computer's selection. Please try again.")
-        return
+    } else if timesScissorsPicked > timesRockPicked && timesScissorsPicked > timesPaperPicked {
+        computerSelection = .rock
+    } else {
+        computerSelection = .rock
     }
 }
 
@@ -181,6 +202,7 @@ func decideWinner() {
     }
 }
 
+//Function to show user statistics, by printing off the number of wins, losses, draws, games, and the percentage of wins the user has gotten
 func showUserStatistics() {
     print("Number of wins: \(numberOfWins)")
     print("Number of losses: \(numberOfLosses)")
