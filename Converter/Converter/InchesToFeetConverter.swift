@@ -8,14 +8,11 @@
 
 import Foundation
 
-class InchesToFeetConverter {
+class InchesToFeetConverter: Converting {
     //Function to get user input for a number of inches from the keyboard and convert it to feet
-    func convertInchesToFeet() {
-        print("Please enter the amount of inches you which to convert to feet: ")
-        if let userInput = Int(inputManager.getUserInput()) {
-            let feet = userInput / 12
-            let inches = userInput % 12
-            print("\(feet) feet, \(inches) inches")
-        }
+    func convert(value: Int) {
+        let feet = value / 12
+        let inches = value % 12
+        print("\(feet) feet, \(inches) inches")
     }
 }

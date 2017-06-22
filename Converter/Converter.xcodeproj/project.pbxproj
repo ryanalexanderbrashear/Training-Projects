@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3909CE9D1EF96C2C00DFFCD8 /* InputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3909CE9C1EF96C2C00DFFCD8 /* InputManager.swift */; };
 		3909CE9F1EFBFE3000DFFCD8 /* InchesToFeetConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3909CE9E1EFBFE3000DFFCD8 /* InchesToFeetConverter.swift */; };
+		3909CEA11EFC017200DFFCD8 /* Converting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3909CEA01EFC017200DFFCD8 /* Converting.swift */; };
 		398436261EF9563500B46E0D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398436251EF9563500B46E0D /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		3909CE9C1EF96C2C00DFFCD8 /* InputManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputManager.swift; sourceTree = "<group>"; };
 		3909CE9E1EFBFE3000DFFCD8 /* InchesToFeetConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InchesToFeetConverter.swift; sourceTree = "<group>"; };
+		3909CEA01EFC017200DFFCD8 /* Converting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converting.swift; sourceTree = "<group>"; };
 		398436221EF9563500B46E0D /* Converter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Converter; sourceTree = BUILT_PRODUCTS_DIR; };
 		398436251EF9563500B46E0D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +66,7 @@
 				3909CE9C1EF96C2C00DFFCD8 /* InputManager.swift */,
 				398436251EF9563500B46E0D /* main.swift */,
 				3909CE9E1EFBFE3000DFFCD8 /* InchesToFeetConverter.swift */,
+				3909CEA01EFC017200DFFCD8 /* Converting.swift */,
 			);
 			path = Converter;
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			files = (
 				3909CE9D1EF96C2C00DFFCD8 /* InputManager.swift in Sources */,
 				3909CE9F1EFBFE3000DFFCD8 /* InchesToFeetConverter.swift in Sources */,
+				3909CEA11EFC017200DFFCD8 /* Converting.swift in Sources */,
 				398436261EF9563500B46E0D /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

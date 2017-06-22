@@ -28,12 +28,19 @@ func getUserSelection() {
     if let userInput = Int(inputManager.getUserInput()) {
         switch userInput {
         case 1:
-            inchesToFeetConverter.convertInchesToFeet()
+            convertInchesToFeet()
         case 2:
             finished = true
         default:
             print("Invalid selection entered. Please try again.")
         }
+    }
+}
+
+func convertInchesToFeet() {
+    print("Please enter the number of inches you wish to convert: ")
+    if let inputInches = Int(inputManager.getUserInput()) {
+        inchesToFeetConverter.convert(value: inputInches)
     }
 }
 
