@@ -14,6 +14,8 @@ var finished: Bool = false
 //Instance of the input manager that handles getting user input from the keyboard
 let inputManager = InputManager()
 
+let inchesToFeetConverter = InchesToFeetConverter()
+
 //Function to display the main menu options for the converter
 func displayMainMenu() {
     print("Welcome to the Converter Application: ")
@@ -26,22 +28,12 @@ func getUserSelection() {
     if let userInput = Int(inputManager.getUserInput()) {
         switch userInput {
         case 1:
-            convertInchesToFeet()
+            inchesToFeetConverter.convertInchesToFeet()
         case 2:
             finished = true
         default:
             print("Invalid selection entered. Please try again.")
         }
-    }
-}
-
-//Function to get user input for a number of inches from the keyboard and convert it to feet
-func convertInchesToFeet() {
-    print("Please enter the amount of inches you which to convert to feet: ")
-    if let userInput = Int(inputManager.getUserInput()) {
-        let feet = userInput / 12
-        let inches = userInput % 12
-        print("\(feet) feet, \(inches) inches")
     }
 }
 
