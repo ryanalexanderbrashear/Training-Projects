@@ -16,11 +16,14 @@ let inputManager = InputManager()
 
 let inchesToFeetConverter = InchesToFeetConverter()
 
+let secondsToMinutesConverter = SecondsToMinutesConverter()
+
 //Function to display the main menu options for the converter
 func displayMainMenu() {
     print("Welcome to the Converter Application: ")
-    print("!. Convert inches to feet")
-    print("2. Quit")
+    print("1. Convert inches to feet")
+    print("2. Convert seconds to minutes")
+    print("3. Quit")
 }
 
 //Function to get the user's main menu option selection and carry out the appropriate operation
@@ -30,6 +33,8 @@ func getUserSelection() {
         case 1:
             convertInchesToFeet()
         case 2:
+            convertSecondsToMinutes()
+        case 3:
             finished = true
         default:
             print("Invalid selection entered. Please try again.")
@@ -41,6 +46,13 @@ func convertInchesToFeet() {
     print("Please enter the number of inches you wish to convert: ")
     if let inputInches = Int(inputManager.getUserInput()) {
         inchesToFeetConverter.convert(value: inputInches)
+    }
+}
+
+func convertSecondsToMinutes() {
+    print("Please enter the number of seconds you wish to convert: ")
+    if let inputSeconds = Int(inputManager.getUserInput()) {
+        secondsToMinutesConverter.convert(value: inputSeconds)
     }
 }
 
