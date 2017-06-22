@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Protocol that Converters conform to, containing a convert function that takes an integer value as input
 protocol Converting {
     func convert(value: Int)
 }
