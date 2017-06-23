@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		395E00791EFD9E4C008612A7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E00781EFD9E4C008612A7 /* main.swift */; };
+		395E00801EFD9EB6008612A7 /* InputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E007F1EFD9EB6008612A7 /* InputManager.swift */; };
+		395E00821EFD9EBA008612A7 /* StatesDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E00811EFD9EBA008612A7 /* StatesDictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		395E00751EFD9E4C008612A7 /* State Capital Testing Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "State Capital Testing Game"; sourceTree = BUILT_PRODUCTS_DIR; };
 		395E00781EFD9E4C008612A7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		395E007F1EFD9EB6008612A7 /* InputManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputManager.swift; sourceTree = "<group>"; };
+		395E00811EFD9EBA008612A7 /* StatesDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatesDictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 		395E00771EFD9E4C008612A7 /* State Capital Testing Game */ = {
 			isa = PBXGroup;
 			children = (
+				395E00811EFD9EBA008612A7 /* StatesDictionary.swift */,
+				395E007F1EFD9EB6008612A7 /* InputManager.swift */,
 				395E00781EFD9E4C008612A7 /* main.swift */,
 			);
 			path = "State Capital Testing Game";
@@ -121,6 +127,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				395E00801EFD9EB6008612A7 /* InputManager.swift in Sources */,
+				395E00821EFD9EBA008612A7 /* StatesDictionary.swift in Sources */,
 				395E00791EFD9E4C008612A7 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

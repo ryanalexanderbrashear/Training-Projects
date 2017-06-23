@@ -1,0 +1,60 @@
+//
+//  StatesDictionary.swift
+//  State Capital Testing Game
+//
+//  Created by Ryan Brashear on 6/23/17.
+//  Copyright © 2017 Ryan Brashear. All rights reserved.
+//
+
+import Foundation
+
+public let statesDictionary = ["ALABAMA" : "MONTGOMERY",
+                               "ALASKA" : "JUNEAU",
+                               "ARIZONA" : "PHOENIX",
+                               "ARKANSAS" : "LITTLE ROCK",
+                               "CALIFORNIA" : "SACRAMENTO",
+                               "COLORADO" : "DENVER",
+                               "CONNECTICUT" : "HARTFORD",
+                               "DELAWARE" : "DOVER",
+                               "FLORIDA" : "TALLAHASSEE",
+                               "GEORGIA" : "ATLANTA",
+                               "HAWAII" : "HONOLULU",
+                               "IDAHO" : "BOISE",
+                               "ILLINOIS" : "SPRINGFIELD",
+                               "INDIANA" : "INDIANAPOLIS",
+                               "IOWA" : "DES MOINES",
+                               "KANSAS" : "TOPEKA",
+                               "KENTUCKY" : "FRANKFORT",
+                               "LOUISIANA" : "BATON ROUGE",
+                               "MAINE" : "AUGUSTA",
+                               "MARYLAND" : "ANNAPOLIS",
+                               "MASSACHUSETTS" : "BOSTON",
+                               "MICHIGAN" : "LANSING",
+                               "MINNESOTA" : "SAINT PAUL",
+                               "MISSISSIPPI" : "JACKSON",
+                               "MISSOURI" : "JEFFERSON CITY",
+                               "MONTANA" : "HELENA",
+                               "NEBRASKA" : "LINCOLN",
+                               "NEVADA" : "CARSON CITY",
+                               "NEW HAMPSHIRE" : "CONCORD",
+                               "NEW JERSEY" : "TRENTON",
+                               "NEW MEXICO" : "SANTA FE",
+                               "NEW YORK" : "ALBANY",
+                               "NORTH CAROLINA" : "RALEIGH",
+                               "NORTH DAKOTA" : "BISMARCK",
+                               "OHIO" : "COLUMBUS",
+                               "OKLAHOMA" : "OKLAHOMA CITY",
+                               "OREGON" : "SALEM",
+                               "PENNSYLVANIA" : "HARRISBURG",
+                               "RHODE ISLAND" : "PROVIDENCE",
+                               "SOUTH CAROLINA" : "COLUMBIA",
+                               "SOUTH DAKOTA" : "PIERRE",
+                               "TENNESSEE" : "NASHVILLE",
+                               "TEXAS" : "AUSTIN",
+                               "UTAH" : "SALT LAKE CITY",
+                               "VERMONT" : "MONTPELIER",
+                               "VIRGINIA" : "RICHMOND",
+                               "WASHINGTON" : "OLYMPIA",
+                               "WEST VIRGINIA" : "CHARLESTON",
+                               "WISCONSIN" : "MADISON",
+                               "WYOMING" : "CHEYENNE"]
