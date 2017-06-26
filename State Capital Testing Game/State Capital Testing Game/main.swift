@@ -51,4 +51,10 @@ if grade >= 90.0 {
     gradeLetter = .F
 }
 
-print("You scored a \(grade)%. Your letter grade is \(gradeLetter).")
+print("You scored a \(grade)%. Your letter grade is \(gradeLetter).\n")
+
+print("Here are the states you didn't get correct:")
+
+for stateName in incorrectStates {
+    print(stateName)
+}
