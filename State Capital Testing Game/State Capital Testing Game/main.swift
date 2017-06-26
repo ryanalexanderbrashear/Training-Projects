@@ -13,12 +13,12 @@ let inputManager = InputManager()
 var correctStates: [String] = []
 var incorrectStates: [String] = []
 
-enum GradeLetter: String {
-    case A = "A"
-    case B = "B"
-    case C = "C"
-    case D = "D"
-    case F = "F"
+enum GradeLetter {
+    case A
+    case B
+    case C
+    case D
+    case F
 }
 
 var gradeLetter: GradeLetter
