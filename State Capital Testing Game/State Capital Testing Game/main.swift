@@ -10,7 +10,20 @@ import Foundation
 
 let inputManager = InputManager()
 
+var correctStates: [String] = []
+var incorrectStates: [String] = []
+
 for state in statesDictionary {
-    print("Please enter the state capital of \(state.key): ")
+    let stateName = state.key
+    let capitalName = state.value
+    print("Please enter the state capital of \(stateName): ")
+    let answer = inputManager.getUserInput().uppercased()
+    if answer == capitalName {
+        print("Correct!")
+        correctStates.append(stateName)
+    } else {
+        print("Incorrect, the capital of \(stateName) is \(capitalName).")
+        incorrectStates.append(stateName)
+    }
 }
 
