@@ -8,5 +8,9 @@
 
 import Foundation
 
-print("Hello, World!")
+let inputManager = InputManager()
+
+for state in statesDictionary {
+    print("Please enter the state capital of \(state.key): ")
+}
 
